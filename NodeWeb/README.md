@@ -105,3 +105,32 @@ Templates compatibles con Express:
 * [Dust](http://www.dustjs.com/)
 * [Twig.js](https://github.com/twigjs/twig.js)
 * [Vash](https://github.com/kirbysayshi/vash)
+
+## [Socket.IO](https://socket.io/)
+
+### ¿Qué es?
+
+* Una librería para manipular websockets.
+* Muy popular.
+* Fallback para navegadores obsoletos.
+* Muy fácil de usar.
+* Servidor / Cliente.
+* [API Docs](https://socket.io/docs/).
+
+### ¿Qué son los [WebSockets](https://www.websocket.org/)?
+
+* Protocolo de comunicación.
+* Full-duplex.
+* Una sola conexión permanente.
+* Stream de mensajes.
+* Contenido en tiempo real.
+* El cliente puede enviar y recibir datos en tiempo real.
+* Orientado a eventos (mensajes).
+* Siempre conectado.
+* Baja latencia.
+* Son fundamentales, para:
+  * Aplicaciones colaborativas.
+  * Juegos multijugador.
+  * Envío de datos.
+  * Cargar recursos.
+* En resumen: "tiempo real" en vez de "a petición".

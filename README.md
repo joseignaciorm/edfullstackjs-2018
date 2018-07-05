@@ -78,6 +78,12 @@
 
 #### Clase 3:
 
+* Socket.IO
+  * Introducción a los sockets
+  * Configuración
+  * Detección de conexiones
+  * Emisión de mensajes
+
 #### Clase 4:
 
 ### 3) MongoDB
