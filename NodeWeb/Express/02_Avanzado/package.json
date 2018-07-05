@@ -1,0 +1,22 @@
+{
+  "name": "express-avanzado",
+  "version": "1.0.0",
+  "description": "Conceptos y configuración avanzada en Express.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -e hbs server.js"
+  },
+  "author": "Jonathan MirCha <jonmircha@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babelify-express": "^0.1.7",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "http-errors": "^1.6.3",
+    "morgan": "^1.9.0",
+    "node-sass-middleware": "^0.11.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
