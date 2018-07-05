@@ -69,6 +69,13 @@
 
 #### Clase 2:
 
+* Express.js Avanzado
+  * Configuración Personalizada
+  * Servir contenido Estático
+  * Template Engines (Handlebars)
+  * Middlewares
+  * Sesiones
+
 #### Clase 3:
 
 #### Clase 4:

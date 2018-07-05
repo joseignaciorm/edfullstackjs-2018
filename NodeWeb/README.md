@@ -65,3 +65,43 @@
 * [Total](https://www.totaljs.com/)
 * [Locomotive](http://www.locomotivejs.org/)
 * [Geddy](http://geddyjs.org/)
+
+### Middlewares
+
+Express.js se ayuda de paquetes adicionales, para mantener su core simple y minimalista: los _[Middlewares](http://expressjs.com/en/guide/using-middleware.html)_.
+
+Son módulos _**plug and play**_ que se pueden apilar arbitrariamente en cualquier orden y proveen cierta funcionalidad.
+
+Hay de dos tipos:
+
+1. **Filtros**: procesan tráfico entrante/saliente, pero no responden a ninguna petición. Por ejemplo `bodyParser`.
+1. **Proveedores**: ofrecen respuestas automáticas a algún tipo de petición. Por ejemplo `static`.
+
+Escribir middlewares para express es muy sencillo:
+
+* Una función que recibe 3 parámetros: `req`, `res`, `next`.
+* Al terminar su tarea, tiene que invocar a `next()`:
+  * **Sin parámetro**: se invoca al siguiente middleware del stack.
+  * **Con parámetro**: se cambia la ruta a lo que se pase como parámetro.
+* Dos maneras de activar middlewares:
+  1. **Globalmente**, activos para toda la app.
+  1. **Locales**. para ciertas rutas.
+
+### Templates Engines
+
+Express tiene un mecanismo para renderizar plantillas que es:
+
+* Agnóstico
+* Modular
+* Simple
+
+Templates compatibles con Express:
+
+* [Jade](http://jade-lang.com/)
+* [Pug](https://pugjs.org/)
+* [EJS](http://ejs.co/)
+* [Handlebars](http://handlebarsjs.com/)
+* [Hogan.js](http://twitter.github.io/hogan.js/)
+* [Dust](http://www.dustjs.com/)
+* [Twig.js](https://github.com/twigjs/twig.js)
+* [Vash](https://github.com/kirbysayshi/vash)
