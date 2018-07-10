@@ -86,6 +86,13 @@
 
 #### Clase 4:
 
+* Creación de Chat
+  * Configuración de Express.js
+  * Configuración de Socket.IO
+  * Programación Backend
+  * Programación Frontend
+  * Emisión de Eventos entre Clientes y Servidor
+
 ### 3) MongoDB
 
 #### Clase 1:
