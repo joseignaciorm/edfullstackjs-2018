@@ -97,6 +97,12 @@
 
 #### Clase 1:
 
+* Introducción a MongoDB
+  * Diferencias entre Bases de Datos SQL y NoSQL
+  * Instalación de MongoDB
+  * Instalación de Robo3T
+  * Configuración y Conexión a MongoDB
+
 #### Clase 2:
 
 #### Clase 3:
