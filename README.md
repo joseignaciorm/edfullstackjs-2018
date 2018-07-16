@@ -105,6 +105,16 @@
 
 #### Clase 2:
 
+* Colecciones y documentos
+  * Crear bases de datos, colecciones y documentos
+  * Mostrar colecciones
+  * Listar y buscar documentos
+  * Eliminar documentos
+  * Editar documentos
+  * Set al editar
+  * Borrar base de datos
+  * Pretty find
+
 #### Clase 3:
 
 #### Clase 4:
