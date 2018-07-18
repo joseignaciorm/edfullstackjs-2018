@@ -98,22 +98,33 @@
 #### Clase 1:
 
 * Introducción a MongoDB
-  * Diferencias entre Bases de Datos SQL y NoSQL
-  * Instalación de MongoDB
-  * Instalación de Robo3T
-  * Configuración y Conexión a MongoDB
+* Diferencias entre Bases de Datos SQL y NoSQL
+* Características de MongoDB
+* Instalación de MongoDB
+* Instalación de Robo3T
+* Configuración y Conexión a MongoDB
 
 #### Clase 2:
 
-* Colecciones y documentos
-  * Crear bases de datos, colecciones y documentos
-  * Mostrar colecciones
-  * Listar y buscar documentos
-  * Eliminar documentos
-  * Editar documentos
-  * Set al editar
-  * Borrar base de datos
-  * Pretty find
+* Bases de datos y Colecciones
+  * Crear
+  * Listar
+  * Eliminar
+* CRUD en Documentos
+  * Insertar
+  * Buscar
+    * feo
+    * bonito
+  * Eliminar
+  * Editar
+    * sin operadores
+    * con $set
+    * con $unset
+    * con $push
+    * con $pull
+    * con $inc
+    * con $rename
+    * masivamente
 
 #### Clase 3:
 
