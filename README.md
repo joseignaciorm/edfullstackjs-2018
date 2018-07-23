@@ -117,6 +117,32 @@
 
 #### Clase 3:
 
+* Ordenamiento de documentos
+* Contar documentos
+* Consultas con expresiones regulares
+* Consultas con notación de punto
+* Operadores de comparación
+  * $gt
+  * $gte
+  * $lt
+  * $lte
+  * $eq
+  * $ne
+  * $in
+  * $nin
+  * between
+  * combinados
+* Operadores lógicos
+  * $not
+  * $nor
+  * $or
+  * $and
+* Otros
+  * $type
+  * $exists
+  * hex_md5()
+  * $where
+
 #### Clase 4:
 
 ### 4) API RESTful con Node.js
