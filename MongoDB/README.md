@@ -1,5 +1,17 @@
 # [MongoDB](https://www.mongodb.com/)
 
+## Diferencias ente SQL y NoSQL
+
+SQL | NoSQL
+-- | --
+_Structured Query Language_ | _Not Only SQL_
+Relacional | No Relacional
+Tablas | Colecciones
+Registros | Documentos (BSON)
+Campos | Atributos
+Esquema definido | Esquema libre
+Sin lazy loading | Con lazy loading
+
 ## ¿Qué es?
 
 > MongoDB es una base de datos NoSQL de tipo documental con alta escalabilidad y flexibilidad que:
@@ -9,55 +21,26 @@
 > * Es una base de datos distribuida en su núcleo , por lo que la alta disponibilidad, la escala horizontal y la distribución geográfica están integradas y son fáciles de usar.
 > * Es gratuita y de código abierto , publicado bajo la Licencia Pública General Affero de GNU.
 
-## Diferencias ente SQL y NoSQL
+### Características
 
-SQL | NoSQL
--- | --
-_Structured Query Language_ | _Not Only SQL_
-Relacional | No Relacional
-Tablas | Colecciones
-Registros | Documentos (BSON)
-Esquema definido | Esquema libre
-Sin lazy loading | Con lazy loading
-
-## Características
-
-* Sin esquema.
-* Alto rendimiento.
-* Almacena documentos BSON.
-* Enfocada en escalabilidad horizontal.
+* Sin esquema, no impone forma a los datos.
+* Alto rendimiento, enfocada en escalabilidad horizontal.
+* Sharding automático (balanceo de carga de datos).
 * Lenguaje de consultas potente.
-* Sin transacciones.
-* Agregado de datos.
-* No impone forma a los datos.
-* No necesita migraciones/reestructuración de la BBDD.
+* No necesita migraciones, ni reestructuración.
 * Permite estructuras muy complejas.
-* Herramientas potentes de agregado con JavaScript.
-  * Map-Reduce.
-  * Aggregation Pipeline.
-* Índices geoespaciales.
-* Búsquedas FTS (Full Text Search).
+* Agregado de datos, índices geoespaciales y búsquedas FTS (Full Text Search).
 * Almacenamiento eficiente de blobs y ficheros.
-* Sharding automático.
-* Replicación.
+* Sin transacciones y sin JOINs, pero, puede empotrar documentos y arrays.
 
 ### Úsalo para
 
-* Prototipos y aplicaciones simples.
-* Hacer la transición de front a back.
 * Aplicaciones con mucha carga de escritura.
 * Agregado de datos a un nivel medio/alto.
 * Aplicaciones con datos muy heterogéneos.
 * Enormes colecciones de datos (sharding).
 * Almacenar ficheros (sharding).
 * Se suelen favorecer los diseños desnormalizados.
-
-### Evítalo para
-
-* No puede hacer JOINs.
-* Sin embargo, se pueden empotrar documentos y arrays.
-* El lenguaje de consulta es menos potente que SQL.
-* No tiene transacciones.
 
 ## Conceptos Básicos
 
@@ -66,8 +49,6 @@ Sin lazy loading | Con lazy loading
 * [Linux](https://docs.mongodb.com/manual/administration/install-on-linux/)
 * [macOS](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 * [Windows](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
-
-### [Documentación](https://docs.mongodb.com/manual/)
 
 ### Bases de datos
 
@@ -82,69 +63,49 @@ Sin lazy loading | Con lazy loading
 
 * Una colección es una agrupación de documentos.
 * Puede alojar cualquier documento (no impone estructura).
-* Puede alojar documentos con diferentes formas.
-
-#### Operaciones con colecciones
-
-* [Operaciones CRUD](https://docs.mongodb.com/manual/crud/).
-* `db.collection.save`: guardar/actualizar un documento.
-* `db.collection.insert`: inserta un documento.
-* `db.collection.findOne`: recuperar un documento.
-* `db.collection.find`: recuperar varios documentos.
-* `db.collection.remove`: borrar uno o varios documentos.
-* `db.collection.drop`: elimina la colección.
-* `db.collection.rename`: cambia de nombre la colección.
-* `db.collection.count`: número de documentos.
+* Puede alojar documentos con diferentes estructuras.
 
 ### Documentos
 
-#### Estructura de un documento
+Estructura de un documento:
 
 ```json
 {
-	"_id" : ObjectId("524872a99c50880000000001"),
-	"email" : "jonmircha@gmail.com",
-	"password" : "qwerty",
-	"name" : "Jonathan",
-	"date" : 1380479657300,
-	"token" : "hm6ly43v.0o1or"
+  "_id" : ObjectId("524872a99c50880000000001"),
+  "email" : "jonmircha@gmail.com",
+  "password" : "qwerty",
+  "name" : "Jonathan",
+  "date" : ISODate(),
+  "token" : "hm6ly43v.0o1or"
 }
 ```
 
-#### Un documento puede contener arreglos y otros documentos
+Un documento puede contener arreglos y otros documentos:
 
 ```json
 {
-	"_id" : ObjectId("5249a2e9b90687d56453b2f3"),
- 	"text" : "Soy un comentario",
- 	"user" : {
- 		"_id" : ObjectId("524872a99c50880000000001"),
- 		"nombre" : "Usuario Prueba",
- 		"avatar" : "/img/user-test.jpg"
- 	},
- 	"tags" : [ "test", "prueba" ]
+  "_id" : ObjectId("5249a2e9b90687d56453b2f3"),
+  "text" : "Soy un comentario",
+  "user" : {
+    "_id" : ObjectId("524872a99c50880000000001"),
+    "nombre" : "Usuario Prueba",
+    "avatar" : "/img/user-test.jpg"
+  },
+  "tags" : [ "test", "prueba" ]
 }
 ```
 
-### [Operadores](https://docs.mongodb.com/manual/reference/operator/query/)
+### [Documentación](https://docs.mongodb.com/manual/)
 
-* `$gt / $gte`: mayor/mayor o igual.
-* `$lt / $lte`: menor/menor o igual.
-* `$ne`: diferente.
-* `$in / $nin`: en/no en array de valores.
-* `$or`: se cumple alguna cláusula.
-* `$and`: se cumplen todas las cláusulas.
-* `$nor`: el resultado opuesto.
-* `$not`: no se cumplen todas las cláusulas.
-
-### Consultas
-
-El mètodo find() devuelve un cursor, que representa un conjunto de resultados:
-
-* `cursor.count(cb)`: cantidad de documentos.
-* `cursor.sort(op, [cb])`: ordenación de documentos.
-* `cursor.limit(n)`: limitar a n documentos.
-* `cursor.skip(n)`: saltarse los n primeros documentos.
-* `cursor.nextObject(cb)`: siguiente documento.
-* `cursor.each(cb)`: para cada doc, en orden.
-* `cursor.toArray(cb)`: convierte el cursor en array.
+* [Comandos del Shell](https://docs.mongodb.com/manual/reference/method/)
+* [Comandos para Bases de Datos](https://docs.mongodb.com/manual/reference/command/)
+* [Tipos de datos BSON](https://docs.mongodb.com/manual/reference/bson-types/index.html)
+* [CRUD en documentos](https://docs.mongodb.com/manual/crud/)
+* [Operadores](https://docs.mongodb.com/manual/reference/operator/)
+* [Validación de esquemas](https://docs.mongodb.com/manual/core/schema-validation/)
+* [Modelado de Datos](https://docs.mongodb.com/manual/core/data-model-design/)
+* Relaciones
+  * [Relación 1 a 1](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/)
+  * [Relación 1 a Muchos, con documento embebido](https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/)
+  * [Relación 1 a Muchos, con documento referenciado](https://docs.mongodb.com/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/)
+* [Funciones Almacenadas](https://docs.mongodb.com/manual/tutorial/store-javascript-function-on-server/index.html)
