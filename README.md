@@ -156,6 +156,15 @@
 
 #### Clase 4:
 
+* Relaciones y Subdocumentos
+  * Relación 1 a 1
+  * Relación 1 a Muchos, con documento embebido
+  * Relación 1 a Muchos, con documento referenciado
+* Lógica de Negocio
+* Modelado de Datos
+* Validación de esquemas
+* Funciones almacenadas
+
 ### 4) API RESTful con Node.js
 
 #### Clase 1:
