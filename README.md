@@ -169,6 +169,19 @@
 
 #### Clase 1:
 
+* Introducción a las API RESTful
+  * API
+  * REST
+* Herramientas para consumir un API RESTful
+  * Formato de sálida
+  * Cliente HTTP para consumir
+* Anatomía de una petición
+  * Rutas
+  * Métodos
+  * Cabeceras
+  * Datos
+* Códigos de estado de HTTP
+
 #### Clase 2:
 
 #### Clase 3:
