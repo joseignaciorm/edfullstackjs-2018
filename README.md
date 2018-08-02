@@ -182,7 +182,7 @@
   * Datos
 * Códigos de estado de HTTP
 
-### Clase 2
+#### Clase 2:
 
 * Desarrollo de API RESTful I
   * Estructura del API
@@ -193,5 +193,12 @@
   * Modelando la BD con Mongoose
 
 #### Clase 3:
+
+* Desarrollo de API RESTful II
+  * Modelos
+  * Rutas
+  * Lógica de Negocio
+  * CRUD del API
+  * Pruebas con POSTMAN
 
 #### Clase 4:
