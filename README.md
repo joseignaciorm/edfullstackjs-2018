@@ -182,7 +182,14 @@
   * Datos
 * Códigos de estado de HTTP
 
-#### Clase 2:
+### Clase 2
+
+* Desarrollo de API RESTful I
+  * Estructura del API
+  * Configuración de Express.js
+  * Creación del servidor web
+  * Conexión a la BD con Mongoose
+  * Modelando la BD con Mongoose
 
 #### Clase 3:
 
