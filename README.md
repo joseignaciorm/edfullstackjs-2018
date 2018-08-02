@@ -187,6 +187,7 @@
 * Desarrollo de API RESTful I
   * Estructura del API
   * Configuración de Express.js
+  * Variables de Entorno Node
   * Creación del servidor web
   * Conexión a la BD con Mongoose
   * Modelando la BD con Mongoose
