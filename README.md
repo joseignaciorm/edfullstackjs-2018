@@ -206,3 +206,8 @@
   * Configuración para producción
 
 #### Clase 4:
+
+* Desarrollo de API RESTful III
+  * Habilitando CORS y Métodos REST
+  * Habilitando interacción con Formularios HTML
+  * CRUD con Formularios HTML, API Fetch y FormData
