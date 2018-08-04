@@ -198,7 +198,11 @@
   * Modelos
   * Rutas
   * Lógica de Negocio
-  * CRUD del API
-  * Pruebas con POSTMAN
+  * Programación CRUD del API
+  * Pruebas CRUD con POSTMAN
+* Desplegando API RESTful en producción
+  * Heroku
+  * mLab
+  * Configuración para producción
 
 #### Clase 4:
