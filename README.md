@@ -199,15 +199,15 @@
   * Rutas
   * Lógica de Negocio
   * Programación CRUD del API
-  * Pruebas CRUD con POSTMAN
-* Desplegando API RESTful en producción
-  * Heroku
-  * mLab
-  * Configuración para producción
 
 #### Clase 4:
 
 * Desarrollo de API RESTful III
+  * Pruebas CRUD con POSTMAN
   * Habilitando CORS y Métodos REST
   * Habilitando interacción con Formularios HTML
-  * CRUD con Formularios HTML, API Fetch y FormData
+  * Pruebas CRUD con Formularios HTML
+* Desplegando API RESTful en producción
+  * Heroku
+  * mLab
+  * Configuración para producción
