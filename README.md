@@ -167,6 +167,8 @@
 
 ### 4) API RESTful con Node.js
 
+[Url del API RESTful](https://edmaratones.herokuapp.com/api/)
+
 #### Clase 1:
 
 * Introducción a las API RESTful
