@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pruebas API RESTful con Formularios</title>
+</head>
+
+<body>
+  <h1>Pruebas API RESTful con Formularios</h1>
+  <h2>Agregar Maratón</h2>
+  <form>
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="country" placeholder="country">
+    <input type="text" name="location" placeholder="location">
+    <input type="submit">
+  </form>
+  <h2>Editar Maratón</h2>
+  <form>
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="country" placeholder="country">
+    <input type="text" name="location" placeholder="location">
+    <input type="text" name="_id" placeholder="_id">
+    <input type="text" name="race_web" placeholder="web">
+    <input type="submit">
+  </form>
+  <h2>Eliminar Maratón</h2>
+  <form>
+    <input type="text" name="_id" placeholder="_id">
+    <input type="submit">
+  </form>
+  <script>
+    fetch('http://localhost:3000/api/marathons')
+      .then(res => res.json())
+      .then(res => console.log(res.data))
+
+    document.forms[0].addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(`https://edmaratones.herokuapp.com/api/marathon`, {
+        method: 'post',
+        body: new FormData(e.target)
+      }).then(res => res.json()).then(res => console.log(res))
+    })
+
+    document.forms[1].addEventListener('submit', e => {
+      e.preventDefault()
+      let formData = new FormData(e.target),
+        id = formData.get('_id')
+
+      fetch(`http://localhost:3000/api/marathon/${id}`, {
+        method: 'put',
+        body: formData
+      }).then(res => res.json()).then(res => console.log(res))
+    })
+
+    document.forms[2].addEventListener('submit', e => {
+      e.preventDefault()
+      let formData = new FormData(e.target),
+        id = formData.get('_id')
+
+      fetch(`http://localhost:3000/api/marathon/${id}`, {
+        method: 'delete',
+        body: formData
+      }).then(res => res.json()).then(res => console.log(res))
+    })
+  </script>
+</body>
+
+</html>
