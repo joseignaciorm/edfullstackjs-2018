@@ -1,6 +1,5 @@
 import calculadora from './calculadora'
-
-const c = console.log
+ let c = console.log
 
 c(`Suma: ${calculadora.sumar(4, 2)}`)
 c(`Resta: ${calculadora.restar(4, 2)}`)

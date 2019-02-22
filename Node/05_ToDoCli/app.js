@@ -1,5 +1,5 @@
-// const singleThread = require('./my_modules/single-thread')
-// singleThread()
+//const singleThread = require('./my_modules/single-thread')
+//singleThread()
 
 const colors = require('colors'),
   c = console.log,

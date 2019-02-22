@@ -1,3 +1,4 @@
+//Para llamar al módulo, declaramos variable calculadora
 const calculadora = require('./calculadora'),
   c = console.log
 

@@ -18,7 +18,7 @@ cuadrado(0)
     c(`Promise: ${obj.value}, ${obj.result}`)
     return cuadrado(1)
   })
-  .then(obj => {
+  .then(obj => {           
     c(`Promise: ${obj.value}, ${obj.result}`)
     return cuadrado(2)
   })

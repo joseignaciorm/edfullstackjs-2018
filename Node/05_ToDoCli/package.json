@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jonathan MirCha <jonmircha@gmail.com>",
+  "author": "José Ignacio RM <joseignaciorm13@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.3.0",
-    "yargs": "^11.0.0"
+    "colors": "^1.3.3",
+    "yargs": "^11.1.0"
   }
 }

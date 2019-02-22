@@ -13,6 +13,10 @@
 * ¿Qué es Node.js?
 * Instalación
   * Tipos de Versiones
+    * Stand Alone
+    * Node Version Manager
+      * NVM para Windows => https://github.com/coreybutler/nvm-windows 
+      * 
   * Tipos de Instalación
 * Introducción a Node
   * Hola Mundo
@@ -23,15 +27,22 @@
 #### Clase 2:
 
 * Asincronía
-  * Callbacks
-  * Promesas
-  * Async/Await
-* NPM
-  * Paquetes en Node
+  Mecanismos Asíncronos en Java Script:
+  * Callbacks: Función que se ejecuta en segundo plano
+  * Promesas: Evitan el codigo en cascada (Callbacks). Las 
+    * promesas devuelven un objeto y en ese objeto recibe dos parámetros
+    * (El ojeto que resuelve, o el objeto que la rechaza)
+  * Async/Await: 
+* NPM Node Package Manage => https://docs.npmjs.com/
+  * Paquetes en Node (Hay dos paquetes)
   * Tipos de Paquetes
   * Proyectos en Node
-  * El archivo package.json
+  * El archivo package.json: Se definen todos los elementos que forman parte del        * proyecto.
   * Tipos de instalaciones
+    * Dependencia de proyecto: Son todas aquellas librerias, modulos que requieren el   * proyecto para funcionar.
+    * Dependencia de desarrollo: Sirven para la fase de desarrollo, como libreria de    * sas, etc. No se usan en fase de producción sino, en fase de desarrollo.
+    * dependencia global: Son las que se van a instalar en el equipo de computo. Las    * que permitan ejecutar comandos desde la terminal para nuestro proyecto.( node   * sass, babel, gestores de tarea, empaquetadores (webpack, etc... ))
+    
 * Paquetes y Módulos
   * Requerir paquetes y archivos
   * Creación de módulos

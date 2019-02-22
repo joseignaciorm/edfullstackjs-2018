@@ -1,6 +1,6 @@
 const singleThread = () => {
   const c = console.log,
-    p = process
+    p = process // Objeto proccess que mantiene todo el proceso de node
 
   //c(p)
 
@@ -9,7 +9,7 @@ const singleThread = () => {
   p.argv[4] = null
   p.argv[5] = true
 
-  //c(p.argv)
+  c(p.argv)
 
   c('---------------------------------------------')
   c('         EL PROCESO DE NODE.JS         ')

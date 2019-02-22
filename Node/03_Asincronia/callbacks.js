@@ -5,6 +5,7 @@ c('**********Programación Asíncrona**********')
 c('**********Callbacks**********')
 
 const cuadrado = (value, callback) => {
+  //setTimeout requiere de una funcion a ejecutar
   setTimeout(() => {
     callback(value, value * value)
   }, 0 | Math.random() * 1000)
