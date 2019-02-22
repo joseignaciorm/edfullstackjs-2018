@@ -1,0 +1,15 @@
+{
+  "name": "aprendiendo-npm",
+  "version": "1.0.0",
+  "description": "Con esta carpeta aprendemos el uso de npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Ignacio RM <joseignaciorm13@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "nodesass": "0.0.2-security"
+  }
+}
